@@ -1,5 +1,9 @@
-.mh-90 {
-    max-height: 90% !important;
+.h-90 {
+    height: 90% !important;
+}
+
+.w-5 {
+    width: 5% !important;
 }
 
 .w-35 {
@@ -8,6 +12,29 @@
 
 .w-65 {
     width: 65% !important;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
+.position-fixed-left {
+    position: fixed !important;
+    left: 1vw !important;
+}
+
+.position-fixed-right {
+    position: fixed !important;
+    right: 1vw !important;
+
+}
+
+.mh-90 {
+    max-height: 90% !important;
+}
+
+.mt-6vw {
+    top: 6vw !important;
 }
 
 body {
