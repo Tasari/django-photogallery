@@ -28,8 +28,10 @@
         <h5 class="card-title">{{picture.name}}</h5>               
         <p class="card-text">{{picture.description}}</p>
         <p class="card-text">{{picture.pub_date}}</p>
-        <p class="card-text"><a href="{{picture.source}}">Source of Picture</a><br><a href={% get_media_prefix %}{{picture.picture}}>Show file</a></p>
-        <p class="card-text"></p>
+        {% if picture.source %}
+        <p class="card-text"><a href="{{picture.source}}">Source of Picture</a></p>
+        {% endif %}
+        <p class="card-text"><a href={% get_media_prefix %}{{picture.picture}}>Show file</a></p>
     </div>
   </div> 
 
