@@ -6,12 +6,13 @@ from PIL import Image
 
 from .models import PicturePost
 
-def create_post(test, desc):
+def create_post(test, desc, source=''):
     picture = create_image(None, 'test.png')
     return PicturePost.objects.create(
         picture = SimpleUploadedFile('test.png', picture.getvalue()),
         name = test,
         description = desc,
+        source = source
         )
 
 def create_image(storage, filename, size=(100, 100), image_mode='RGB', image_format='PNG'):
@@ -70,3 +71,21 @@ class PicturePostDetailViewTests(TestCase):
         url = reverse('photogallery:detail', args=(post.id,))
         response = self.client.get(url)
         self.assertContains(response, post.name)
+    
+    def test_post_has_no_source(self):
+        """
+        Checks if there is option to click source if picture does not have one.
+        """
+        post = create_post("Test 3", "Test 3 desc")
+        url = reverse('photogallery:detail', args=(post.id,))
+        response = self.client.get(url)
+        self.assertNotContains(response, "Source of Picture")
+
+    def test_post_has_source(self):
+        """
+        Checks if there is option to click source if picture has one.
+        """
+        post = create_post("Test 3", "Test 3 desc", "Test Source")
+        url = reverse('photogallery:detail', args=(post.id,))
+        response = self.client.get(url)
+        self.assertContains(response, "Source of Picture")
