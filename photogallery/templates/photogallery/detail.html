@@ -14,8 +14,8 @@
   </nav>
 
   <a href="{% url 'photogallery:prev' picture.id %}" >
-    <button class="btn w-5 h-90 position-fixed-right mt-6vw" style="background-color: rgba(97, 112, 119, 0.589);">
-      <svg width="9vw" height="9vw" viewBox="0 0 16 16" class="bi bi-arrow-right-short" style="position:fixed !important;right:-1vw !important" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <button class="btn w-3rem h-90 position-fixed-right" style="background-color: rgba(97, 112, 119, 0.589);">
+      <svg width="5.5rem" height="5.5rem" viewBox="0 0 16 16" class="bi bi-arrow-right-short" style="position:fixed !important;right:-0.7rem !important;top:47%" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
       </svg>
     </button>
@@ -39,14 +39,14 @@
     {% if picture.url_height < 1000 or picture.url_height < picture.url_width %}
       <img src={% get_media_prefix %}{{picture.picture}} class="card-img-top rounded">
     {% else %}
-      <img src={% get_media_prefix %}{{picture.picture}} class="card-img-top w-50 rounded" >
+      <img src={% get_media_prefix %}{{picture.picture}} class="card-img-top w-3rem0 rounded" >
     {% endif %}  
   </div>
 </div>
 
 <a href="{% url 'photogallery:next' picture.id %}" >
-  <button class="btn w-5 h-90 position-fixed-left mt-6vw" style="background-color: rgba(97, 112, 119, 0.589);">
-    <svg width="9vw" height="9vw" viewBox="0 0 16 16" class="bi bi-arrow-left-short" style="position:fixed !important;left:-1vw !important" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <button class="btn w-3rem h-90 position-fixed-left" style="background-color: rgba(97, 112, 119, 0.589);">
+    <svg width="5.5rem" height="5.5rem" viewBox="0 0 16 16" class="bi bi-arrow-left-short" style="position:fixed !important;left:-0.7rem !important;top:47%" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
     </svg>
   </button>

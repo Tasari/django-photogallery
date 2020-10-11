@@ -2,8 +2,8 @@
     height: 90% !important;
 }
 
-.w-5 {
-    width: 5% !important;
+.w-3rem {
+    width: 3rem !important;
 }
 
 .w-35 {
@@ -20,12 +20,14 @@
 
 .position-fixed-left {
     position: fixed !important;
-    left: 1vw !important;
+    left: 0.6rem !important;
+    top: 8% !important;
 }
 
 .position-fixed-right {
     position: fixed !important;
-    right: 1vw !important;
+    right:0.6rem !important;
+    top: 8% !important;
 
 }
 
@@ -33,11 +35,8 @@
     max-height: 90% !important;
 }
 
-.mt-6vw {
-    top: 6vw !important;
-}
+
 
 body {
     background-color:rgb(41, 43, 44);
 }
-
