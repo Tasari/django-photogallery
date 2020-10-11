@@ -18,7 +18,7 @@ class PicturePost(models.Model):
     """
     picture = models.ImageField(upload_to = '', height_field="url_height", width_field="url_width")
     name = models.CharField(max_length=30)
-    description = models.CharField(max_length=999)
+    description = models.TextField()
     pub_date = models.DateTimeField('Publication date', auto_now=True)
     objects = models.Manager()
     source = models.CharField(max_length=255, blank=True)
