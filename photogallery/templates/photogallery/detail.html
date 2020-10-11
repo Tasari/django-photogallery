@@ -22,7 +22,7 @@
   </a>
 
 
-<div class="container mt-5 w-90 h-90">
+<div class="mt-5 w-80 h-90"style="margin-right:4rem;margin-left:4rem;background-color: rgb(41, 43, 44);">
   <div class="card w-35 mh-90 rounded-0 float-left text-white border-0" style="background-color: rgb(41, 43, 44);">
     <div class="card-body">
         <h5 class="card-title">{{picture.name}}</h5>               
@@ -35,8 +35,8 @@
     </div>
   </div> 
 
-  <div class="card w-65 mh-100 float-left rounded-0 border-0" style="background-color: rgb(41, 43, 44);">
-    {% if picture.url_height < 1000 or picture.url_height < picture.url_width %}
+  <div class="card w-65 mh-100 float-right rounded-0 border-0" style="background-color: rgb(41, 43, 44);">
+    {% if picture.url_height < 700 or picture.url_height < picture.url_width %}
       <img src={% get_media_prefix %}{{picture.picture}} class="card-img-top rounded">
     {% else %}
       <img src={% get_media_prefix %}{{picture.picture}} class="card-img-top w-50 rounded" >
