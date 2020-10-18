@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('photogallery', '0003_picturepost_source'),
+        ('django_photogallery', '0003_picturepost_source'),
     ]
 
     operations = [

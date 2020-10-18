@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class PhotogalleryConfig(AppConfig):
-    name = 'photogallery'
+    name = 'django_photogallery'

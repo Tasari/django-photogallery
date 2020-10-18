@@ -21,7 +21,7 @@ class PicturePost(models.Model):
     description = models.TextField()
     pub_date = models.DateTimeField('Publication date', auto_now=True)
     objects = models.Manager()
-    source = models.CharField(max_length=255, blank=True)
+    source = models.URLField(max_length=255, blank=True)
     url_height=models.PositiveIntegerField()
     url_width=models.PositiveIntegerField()
 
