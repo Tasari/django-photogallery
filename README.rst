@@ -11,16 +11,16 @@ Quick start
     
     pip install django-photogallery
 
-2. Add "photogallery" to INSTALLED_APPS::
+2. Add "django_photogallery" to INSTALLED_APPS::
     
     INSTALLED_APPS = [
         ...
-        'photogallery',
+        'django_photogallery.apps.PhotogalleryConfig',
     ]
 
 3. Add photogallery URLconf to urls.py::
 
-    path('photogallery/', include('photogallery.urls')),
+    path('photogallery/', include('django_photogallery.urls')),
 
 4. Run ``python manage.py migrate`` to create models.
 
