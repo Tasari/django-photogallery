@@ -22,8 +22,8 @@ class PicturePost(models.Model):
     pub_date = models.DateTimeField('Publication date', auto_now=True)
     objects = models.Manager()
     source = models.URLField(max_length=255, blank=True)
-    url_height=models.PositiveIntegerField()
-    url_width=models.PositiveIntegerField()
+    url_height=models.PositiveIntegerField(blank=True)
+    url_width=models.PositiveIntegerField(blank=True)
 
     def __str__(self):
         return self.name
